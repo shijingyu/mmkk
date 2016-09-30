@@ -25,9 +25,17 @@
     $password=$_POST['password'];//post获取表单里的password
     $qq=$_POST['qq'];
     $mail=$_POST['email'];
-    include('connect.php');//链接数据库
-    $q="insert into stone(AUTO_INCREMENT,usename,password,qq,mail) values (null,'$name','$password','$qq','$mail')";//向数据库插入表单传来的值的sql
-    
+
+    $eusername = stripslashes(trim($_POST['username']));
+    $epassword = md5(trim($_POST['password']));
+    $eemail = trim($_POST['email']);
+    //$eregtime = time();
+    $token = md5($eusername.$epassword.$eregtime);
+    $token_exptime = time()+60*60*24;
+
+
+
+
     
     $y = "select * from stone where usename='$name'";
     $reslut=mysql_query($y);
@@ -46,8 +54,36 @@
 //     if (!$query){
 //         die('Error: ' . mysql_error());//如果sql执行失败输出错误
 //     }else{
-        echo "<script>
-                         location.href='sendemail.html'</script>";//成功输出注册成功
+       
+$sql = "insert into `stone` (`usename`,`password`,`mail`,`token`,`token_exptime`,`regtime`,`qq`) values ('$eusername','$password','$eemail','$token','$token_exptime','$regtime','$qq')";
+
+mysql_query($sql,$con);
+
+                          include_once("smtp.class.php");
+                          $smtpserver = "smtp.163.com"; //SMTP服务器
+                          $smtpserverport = 25; //SMTP服务器端口
+                          $smtpusermail = "13043336375@163.com"; //SMTP服务器的用户邮箱
+                          $smtpuser = "13043336375@163.com"; //SMTP服务器的用户帐号
+                          $smtppass = "xy960722"; //SMTP服务器的用户密码
+                          $smtp = new Smtp($smtpserver, $smtpserverport, true, $smtpuser, $smtppass); //这里面的一个true是表示使用身份验证,否则不使用身份验证.
+                          $emailtype = "HTML"; //信件类型，文本:text；网页：HTML
+                          $smtpemailto = $eemail;
+                          $smtpemailfrom = $smtpusermail;
+                          $emailsubject = "用户帐号激活";
+                          $emailbody = "亲爱的".$eusername."：<br/>感谢您在我站注册了新帐号。<br/>请点击链接激活您的帐号。<br/><a href='http://123.206.85.68/mmkk/active.php?verify=".$token."' target='_blank'>http://123.206.85.68/mmkk/active.php?verify=".$token."</a><br/>如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。<br/>如果此次激活请求非你本人所发，请忽略本邮件。<br/><p style='text-align:right'>-------- MkStone 敬上</p>";
+
+  $rs = $smtp->sendmail($smtpemailto, $smtpemailfrom, $emailsubject, $emailbody, $emailtype);
+  if($rs==1){
+   echo "<script>
+                         location.href='sendemail.html'</script>";
+ 
+  }else{
+    $msg = $rs; 
+  }
+echo $msg;
+
+
+
 
                      }
 
