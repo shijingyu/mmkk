@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-<title>简洁大气快速登录注册模板</title> 
+<title>MkStone | 注册登录</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<h1>登录注册界面</h1>
+<h1>MkStone | 注册登录</h1>
 
 <div class="login" style="margin-top:50px;">
     
@@ -35,10 +35,10 @@
 				<form action="MkStone_login.php" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0"/>
                <input type="hidden" name="to" value="log"/>
                 <div class="uinArea" id="uinArea">
-                <label class="input-tips"   for="u">用户名：</label>
+                <label class="input-tips"   for="u" >用户名：</label>
                 <div class="inputOuter" id="uArea">
                     
-                    <input type="text" id="u" name="username" class="inputstyle required"/>
+                    <input type="text" id="u" name="username" class="inputstyle required" placeholder="请输入用户名" autofocus="autofocus" />
                 </div>
                 </div>
                 
@@ -50,7 +50,7 @@
                 </div>
                 </div>
                
-                <div style="padding-left:50px;margin-top:20px;"><input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
+                <div style="padding-left:60px;margin-top:20px;"><input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
               </form>
      
            </div>
@@ -61,11 +61,15 @@
             <!--登录end-->
   </div>
 
+
+
+
+
   <!--注册-->
     <div class="qlogin" id="qlogin" style="display: none; ">
    
     <div class="web_login">
-    <form name="form2" id="regUser" accept-charset="utf-8"  action="MkStone_Signup.php" method="post">
+    <form name="form2" id="regUser" accept-charset="utf-8" onsubmit="return vForm()" action="MkStone_Signup.php" method="post">
 	      <input type="hidden" name="to" value="reg"/>
 		      		       <input type="hidden" name="did" value="0"/>
         <ul class="reg_form" id="reg-ul">
@@ -74,7 +78,7 @@
                 	
                     <label for="user"  class="input-tips2">用户名：</label>
                     <div class="inputOuter2">
-                        <input type="text" id="username" name="username" maxlength="16" class="inputstyle2 required"/>
+                        <input type="text" id="username" name="username" minlength="6"  maxlength="16" class="inputstyle2 required"/>
                     </div>
                     
                 </li>
@@ -82,7 +86,7 @@
                 	
                     <label for="email"  class="input-tips2">邮箱：</label>
                     <div class="inputOuter2">
-                        <input type="text" id="email" name="email" maxlength="20" class="inputstyle2 required email" />
+                        <input type="text" id="email" name="email" maxlength="20"  class="inputstyle2 required email" />
                     </div>
                     
                 </li>
@@ -96,7 +100,7 @@
                 <li>
                 <label for="passwd2" class="input-tips2">确认密码：</label>
                     <div class="inputOuter2">
-                        <input type="password" id="password2" name="" maxlength="16" class="inputstyle2 required" />
+                        <input type="password" id="password2" name=""  maxlength="16" class="inputstyle2 " />
                     </div>
                     
                 </li>
@@ -105,20 +109,20 @@
                  <label for="qq" class="input-tips2">QQ：</label>
                     <div class="inputOuter2">
                        
-                        <input type="text" id="qq" name="qq" maxlength="10" class="inputstyle2 required number"/>
+                        <input type="text" id="qq" name="qq" maxlength="10"   class="inputstyle2 required number"/>
                     </div>
                    
                 </li>
                 
                 <li>
                     <div class="inputArea">
-                        <input type="submit" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" value="同意协议并注册"/> <a href="index.html" id="zcxy1" class="zcxy" >注册协议</a>
+                        <input type="submit" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" onclick="return check()" value="同意协议并注册"/> <a href="index.html" id="zcxy1" class="zcxy" >注册协议</a>
                     </div>
                     
                 </li><div class="cl"></div>
             </ul></form>
              
-        <script>
+       <!--  <script>
         
             $("#regUser").validate();
             
@@ -129,7 +133,7 @@
                 $("#login_form").validate();
             
         </script>
-
+ -->
            
     
     </div>
@@ -145,6 +149,28 @@ $(function(){
         return false;
     })
 })
+</script> 
+
+<script>
+ function vForm(){
+    var x=document.forms["form2"]["password"].value;
+    var y=document.forms["form2"]["password2"].value;
+    if(x!=y){
+        alert("两次输入的密码不相同，请重新输入！");
+        location.href='login_register.html';
+    return false;
+    
+    }
+    
+}
+  
 </script>
+
+
+
+
+
+
+
  
 </body></html>
