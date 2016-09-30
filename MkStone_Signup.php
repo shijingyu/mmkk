@@ -41,16 +41,17 @@
       }
     else{ 
 
-$query=mysql_query($q,$con);//执行sql
+// $query=mysql_query($q,$con);//执行sql
 
-    if (!$query){
-        die('Error: ' . mysql_error());//如果sql执行失败输出错误
-    }else{
+//     if (!$query){
+//         die('Error: ' . mysql_error());//如果sql执行失败输出错误
+//     }else{
         echo "<script>
-                         alert('注册成功');location.href='login_register.html'</script>";//成功输出注册成功
-    }
+                         location.href='sendemail.html'</script>";//成功输出注册成功
 
-  }  
+                     }
+
+ // }  
 
     mysql_close($con);//关闭数据库
 
