@@ -1,0 +1,22 @@
+.main{
+    -webkit-column-width:225px;
+    -moz-column-width:160px; 
+	-webkit-column-gap:3px;
+	-moz-column-gap:3px;
+}
+
+
+/*数据块 砖块*/
+
+.main .box{width:200px;
+           margin:10px 0;
+           border:1px solid #ccc;
+           box-shadow:0 0 5px #ccc; 
+           }
+body
+{
+	padding-top: 70px;
+}            
+
+
+           

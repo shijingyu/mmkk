@@ -1,0 +1,40 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+body
+{
+	padding-top: 50px;
+}
+
+.content h1
+{
+	padding:20px 0;
+}
+
+.col-md-4 p
+{
+	line-height: 20px;
+    padding-top: 30px;
+}
+.col-md-8 .box
+{
+	margin: 10px 0;
+	width: 590px;
+	height: 165px;
+}
+.col-md-8 .box .col-md-10 p
+{
+	margin: 10px 0;
+}
+.col-md-8 .box .col-md-2 img
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.col-md-8 .box .col-md-10 p
+{
+	margin: 10px 0;
+	font-size: 20px;
+}
