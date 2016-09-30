@@ -27,16 +27,30 @@
     $mail=$_POST['email'];
     include('connect.php');//链接数据库
     $q="insert into stone(AUTO_INCREMENT,usename,password,qq,mail) values (null,'$name','$password','$qq','$mail')";//向数据库插入表单传来的值的sql
-    $reslut=mysql_query($q,$con);//执行sql
     
-    if (!$reslut){
+    
+    $y = "select * from stone where usename='$name'";
+    $reslut=mysql_query($y);
+    $num = mysql_num_rows($reslut);
+    if($num>=1)
+       {   
+            echo "<script>
+                         alert('用户名已存在！');location.href='login_register.html'</script>";
+           exit;
+
+      }
+    else{ 
+
+$query=mysql_query($q,$con);//执行sql
+
+    if (!$query){
         die('Error: ' . mysql_error());//如果sql执行失败输出错误
     }else{
         echo "<script>
                          alert('注册成功');location.href='login_register.html'</script>";//成功输出注册成功
     }
 
-    
+  }  
 
     mysql_close($con);//关闭数据库
 
