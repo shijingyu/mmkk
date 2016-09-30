@@ -40,8 +40,8 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	top: 0;
 	left: 0;
 	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
+	background: #000;
+	color: #87b4e0;
 }
 
 .grid figcaption h3 {
@@ -59,7 +59,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #ed4e6e;
+	background: #87b4e0;
 	color: #fff;
 }
 
