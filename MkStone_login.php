@@ -1,8 +1,8 @@
 <?php
     header("Content-Type: text/html; charset=utf8");
-    if(!isset($_POST["submit"])){
-        exit("错误执行");
-    }//检测是否有submit操作 
+   // if(!isset($_POST["submit"])){
+      //  exit("错误执行");
+   // }//检测是否有submit操作 
 
 include('MkStone_Connect.php');//链接数据库
     $name = $_POST['username'];//post获得用户名表单值
@@ -13,7 +13,13 @@ include('MkStone_Connect.php');//链接数据库
              $result = mysql_query($sql);//执行sql
              $rows=mysql_num_rows($result);//返回一个数值
              if($rows){//0 false 1 true
-                   header("refresh:0;url=index.html");//如果成功跳转至welcome.html页面
+                     echo "
+                    <script>
+                            alert('登录成功');location.href='index.html'
+                    </script>
+
+                ";
+                   
                    exit;
              }else{
              
