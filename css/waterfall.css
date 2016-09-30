@@ -17,6 +17,24 @@ body
 {
 	padding-top: 70px;
 }            
-
-
+footer
+{
+	height: 50px;
+	background-color: #222;
+    margin-top: 20px;
+}
+footer .container p
+{
+	color: #fff;
+	line-height: 50px;
+	height: 50px;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 16px;
+}
+.box p
+{
+	text-align: center;
+	padding: 5px;
+}
            
