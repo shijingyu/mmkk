@@ -94,9 +94,10 @@ input::-ms-clear {
 .web_login .input-tips {
 	float:left;
 	margin-top:10px;
-	width:50px;
+	text-align: right;
+	width:60px;
 	height:42px;
-	font-size:16px;
+	font-size:14px;
 	line-height:42px;
 	font-family:"Hiragino Sans GB", "Microsoft Yahei";
 }
