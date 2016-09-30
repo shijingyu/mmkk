@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<?php 
-=======
-  <?php
 
->>>>>>> 765df7a6dbd862e76b508f99176dad235194ec53
+<?php 
+
     $server="localhost";//主机
     $db_username="root";//你的数据库用户名
     $db_password="";//你的数据库密码
@@ -15,7 +12,6 @@
     
     mysql_select_db('mkstone',$con);//选择数据库（我的是test）
 
-<<<<<<< HEAD
 
 
 
@@ -77,5 +73,4 @@ include('MkStone_Connect.php');//链接数据库
     }
     mysql_close();//关闭数据库
 ?>
-MkStone_login.phpMkStone_login.php
->>>>>>> 765df7a6dbd862e76b508f99176dad235194ec53
+
