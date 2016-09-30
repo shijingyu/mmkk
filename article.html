@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/waterfall.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -216,6 +217,46 @@
 </div>
 <!-- 主体部分结束 -->
 
+<div class="asid_share" id="asid_share">
+  <div class="asid_share_box relative">
+    <a href="#"><img alt="" title="我有话说" class="adid_icon" src="images/icon_say.png"></a>
+  </div>
+  <div class="asid_share_box relative">
+    <a href="#"><img alt="" title="新版帮助" class="adid_icon" src="images/icon_help.png"></a>
+    <div class="asid_share_triangle" style="display:none;">
+      <em class="border_sj">&#9670;</em>
+      <span class="con_sj">&#9670;</span>
+    </div>
+    <div class="asid_sha_layer" style="display:none;">
+     <!--  <ul class="asid_help_list" style="width:130px;">
+        <li><a href="#">测试数据</a></li>
+        <li><a href="#">测试数据</a></li>
+        <li><a href="#">测试数据</a></li>
+        <li><a href="#">测试数据</a></li>
+      </ul> -->
+    </div>
+  </div>
+  <div class="asid_share_box relative">
+    <a href="#"><img alt="" title="扫二微码" class="adid_icon" src="images/icon_sweep.png"></a>
+    <div class="asid_share_triangle" style="display:none;">
+      <em class="border_sj">&#9670;</em>
+      <span class="con_sj">&#9670;</span>
+    </div>
+    <div class="asid_sha_layer" style="width:250px;display:none;">
+      <p class="sweep_img"><img src="images/erweima.jpg" width="220"></p>
+      <p class="pb6"><b>扫一扫，关注我们</b></p>
+    </div>
+  </div>
+  <div class="asid_share_box relative" style="display:none;">
+    <a href="#"><img alt="" title="返回顶部" class="adid_icon" src="images/icon_back.png"></a>
+  </div>
+</div>
+<!-- asid end -->
+
+
+
+
+
  <!-- 底部开始 -->
  <footer>
    <div class="container">
@@ -240,6 +281,22 @@
 
 
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jQuery.hhShare.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+    //图片滚动特效
+    $('#asid_share').hhShare({
+      cenBox     : 'asid_share_box',  //里边的小层
+      icon       : 'adid_icon',
+      addClass   : 'red_bag',
+      titleClass : 'asid_title',
+      triangle   : 'asid_share_triangle', //鼠标划过显示图层，边上的小三角
+      showBox    : 'asid_sha_layer' //鼠标划过显示图层
+    });
+    });
+    </script>
+
   </body>
 </html>
