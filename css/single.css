@@ -1,0 +1,60 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	padding-top: 70px;
+}
+
+.content .container .row .single-l h1
+{
+	margin-top: 20px;
+}
+.single-ms
+{
+	padding-bottom: 5px;
+}
+.single-ms p
+{
+	padding: 10px 0;
+	margin: 5px;
+	line-height: 20px;
+}
+.single-ms button
+{
+	margin-bottom: 8px;
+}
+
+.jianjie
+{
+	margin-top: 30px;
+}
+.jianjie p
+{
+	line-height: 30px;
+}	
+
+.xsjis img
+{
+   padding: 10px;
+}
+
+
+.list-group
+{
+	margin-top: 36px;
+}
+footer
+{
+	background: #ccc;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-bottom: 0;
+}
+footer p
+{
+	margin-bottom: 0;
+}
