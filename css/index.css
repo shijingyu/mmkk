@@ -24,6 +24,10 @@ border-bottom: 1px solid #ccc;
 .dropdown-menu li a:hover{
 	color: #ccc;
 }
+#navbar-r{
+  padding-right: 30px;
+  font-size: 24px;
+}
 .index-intro{
 
 	margin: 0 auto;

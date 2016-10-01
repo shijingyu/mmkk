@@ -16,7 +16,8 @@
 		#section0,
 		#section1,
 		#section2,
-		#section3{
+		#section3,
+		#section4{
 			background-color: #000;
 			background-size: cover;
 			background-position: 50% 50%;
@@ -37,6 +38,16 @@
 			text-shadow:1px 1px 1px #666;
 		}
 		#section3{
+			color: #008283;
+			background-image: url(../images/2.jpg);
+			text-shadow:1px 1px 1px #fff;
+		}
+		#section4{
+			color: #fff;
+			background-image: url(../images/1.jpg);
+			text-shadow:1px 1px 1px #fff;
+		}
+		#section5{
 			color: #008283;
 			background-image: url(../images/2.jpg);
 			text-shadow:1px 1px 1px #fff;
@@ -109,12 +120,7 @@
 			-webkit-animation: sec0 1s ease-in-out 100ms forwards;
 			animation: sec0 1s ease-in-out 100ms forwards;
 		}
-          .header{
-          	position: fixed;
-         	width: 300px;
-         	height: 200px;
-         	
-         }
+       
              
 
 
