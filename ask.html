@@ -8,24 +8,104 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/aside/style.css">
     <link rel="stylesheet" href="css/ask.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/aside/sidebar-menu.css">
+     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ask.js"></script>
+   
 
   </head>
   <body>
+  
+  
+<header class="">
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">mkStone</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">mkStone</a>
+    </div>
 
-  <nav></nav>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       <li><a href="index.html">首页</a></li>
+            <li class="active"><a href="article.html">文章</a></li>
+            <li><a href="">问答</a></li>
+            <li><a href="download.html">资源</a></li>
+            <li><a href="about.html">关于</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
 
+      <!-- 账户没有登录前显示的界面 -->
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">登录注册<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="login_register.html">登录</a></li>
+            <li><a href="login_register.html">注册</a></li>
+            <li><a href="article.html">退出</a></li>
+          </ul>
+        </li>
+      </ul> -->
+       <!-- 结束 -->
+
+
+       <!-- 账户登录后显示 -->
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/login-info.jpg" alt="" ><span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="article.html">个人资料</a></li>
+            <li><a href="article.html">退出</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- 结束 -->
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+   <a id="cd-menu-trigger" href="" class=""><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+</nav>
+   
+  </header>
+  <main class="cd-main-content">
 <div class="nav1">
   <h3>Welcome to mkStone</h3>
   <p>This is beta software and you should not use it in production.</p>
+
 </div>
+<!-- 侧边栏 -->
+<!-- <div id="slideToggle">
+<aside class="main-sidebar"> -->
+
+<!--  </aside>
+ </div> -->
+
+ <!-- main -->
 
     <div class="container">
       <div class="row">
       <!-- 标签 -->
         <div class="col-md-3">
        <ul class="nav nav-pills nav-stacked" role="tablist">
-         <li role="presentation" class="active"><a href="#">所有话题</a></li>
+         <li role="presentation" id="first-li" class="active"><a href="#">所有话题</a></li>
          <li role="presentation"><a href="#">前端开发</a></li>
          <li role="presentation"><a href="#">后端开发</a></li>
          <li role="presentation"><a href="#">UI设计</a></li>
@@ -33,6 +113,7 @@
        </ul>
 
         </div>
+
 <!-- 问答区 -->
         <div class="col-md-9">
         <!-- toolbar -->
@@ -46,10 +127,91 @@
              <option value="newest">最新话题</option>
              <option value="oldest">最旧话题</option>
           </select>
+         
        </span>
        </li>
        </ul>
        </div>   
+<!-- discussion list -->
+<div class="dis-list">
+  <ul class="dis-list-dis">
+    <li data-id="6">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img  class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p><i class=""></i>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+    <li data-id="5">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+    <li data-id="4">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+    <li data-id="3">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+    <li data-id="2">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+    <li data-id="1">
+    <div class="dis-list-item">
+    <div class="dis-list-item-content">
+      <a href="" class="dlic-head"><img class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
+      <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p>
+      </div>
+    </div>  
+
+    </div>
+    </li>
+
+
+  </ul>
+</div>
+
+
 
         </div>
 
@@ -60,10 +222,97 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+           <p>
+                吾儿，当你出生的那天,洛丹伦的森林中悄声回荡着你的名字“阿尔萨斯”。</p>
+                <p>吾儿,我骄傲地看着你成长为正义的代行者。记住——我们的家族永远用智慧和力量统治。</p>
+                <p>我也知道当你试着使用你巨大的力量的时候,你会保持克制。</p>
+                <p>但真正的胜利,吾儿——是获得你的人民的心</p>
 
+                <p><strong><em>总有一天我的生命将终抵达终点，而你将加冕为王。</em></strong></p>
+                <div id="comment"></div>
+
+      </div>
+      <div class="modal-footer">
+      <textarea name="" id="" cols="50" rows="2"></textarea>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="btn" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /modal -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+   </main> <!-- cd-main-content -->
+
+  <nav id="cd-lateral-nav" class="">
+    <ul class="cd-navigation">
+      <li class="item-has-children">
+        <a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Services</a>
+        <ul class="sub-menu">
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Brand</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Web Apps</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Mobile Apps</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Products</a>
+        <ul class="sub-menu">
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Product 1</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Product 2</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Product 3</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Product 4</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Product 5</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Stockists</a>
+        <ul class="sub-menu">
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">London</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">New York</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Milan</a></li>
+          <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Paris</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+    </ul> <!-- cd-navigation -->
+
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Tour</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Login</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Register</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Pricing</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Support</a></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a class="current" href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Journal</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">FAQ</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Terms &amp; Conditions</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Careers</a></li>
+      <li><a href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Students</a></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <div class="cd-navigation socials">
+      <a class="cd-twitter cd-img-replace" href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Twitter</a>
+      <a class="cd-github cd-img-replace" href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Git Hub</a>
+      <a class="cd-facebook cd-img-replace" href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Facebook</a>
+      <a class="cd-google cd-img-replace" href="http://demo.htmleaf.com/1412/201412111806/index.html#0">Google Plus</a>
+    </div> <!-- socials -->
+  </nav>
+  
+
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="js/aside/main.js.下载"></script> <!-- Resource jQuery -->
+
   </body>
 </html>

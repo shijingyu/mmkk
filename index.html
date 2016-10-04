@@ -7,7 +7,7 @@
     <title>mkStone</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/jqhover.css">
 
@@ -52,7 +52,7 @@
     <div class="row">
       <div class="col-md-12">
         <h2>mkStone网站正在搭建中……</h2>
-        <p><a href="index.html" class="btn btn-outline btn-lg">查看介绍</a></p>
+        <div type="button" data-toggle="modal" data-target="#myModal" class="btn btn-outline btn-lg">查看介绍</div>
 
       </div>
     </div>
@@ -179,7 +179,35 @@
 </div>
 </footer>
 
-    
+  
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><em>
+        mkStone</em></h4>
+      </div>
+      <div class="modal-body">
+                <p>
+                吾儿，当你出生的那天,洛丹伦的森林中悄声回荡着你的名字“阿尔萨斯”。</p>
+                <p>吾儿,我骄傲地看着你成长为正义的代行者。记住——我们的家族永远用智慧和力量统治。</p>
+                <p>我也知道当你试着使用你巨大的力量的时候,你会保持克制。</p>
+                <p>但真正的胜利,吾儿——是获得你的人民的心</p>
+
+                <p><strong><em>总有一天我的生命将终抵达终点，而你将加冕为王。</em></strong></p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
   <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/modernizr.custom.js"></script>

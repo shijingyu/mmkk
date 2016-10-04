@@ -1,3 +1,13 @@
+body{
+	background: #fff;
+	color: #111;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	line-height: 1.5;
+	overflow-y: scroll;
+
+}
+
 nav{
 	height: 80px;
 }
@@ -10,7 +20,8 @@ nav{
 	text-align: center;
 }
 .toolbar{
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
+	padding-left: 40px;	
 }
 .toolbar-view{
   display: inline-block;
@@ -28,10 +39,45 @@ nav{
 .select select{
 	display: inline-block;
 	width: auto;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	padding-right: 30px;
+	color: #7088a9;
+	padding-right: 10px;
 	cursor: pointer;
 	background-color: #f0f0f0;
+	line-height: 1;
+	border-radius:2px;
+
+}
+
+/*discussion list*/
+
+.dis-list ul{
+    list-style: none;
+
+}
+
+.dis-list li{
+	
+	height: 80px;
+	/*border: 1px solid #ccc;*/
+	border-radius: 12px;
+	margin-bottom: 20px;
+}
+.dis-list li a{
+	text-decoration: none;
+	color: #000;
+}
+.dlic-head img{
+   
+	display: inline-block;
+	width: 60px;
+}
+.dis-list-item-content .dlic-head{
+	display: inline-block;
+	padding:10px 0 10px 0;
+}
+.dis-list-item:hover{
+   background-color: #ccc;
+}
+.modal{
 
 }

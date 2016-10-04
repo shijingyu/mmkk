@@ -115,3 +115,12 @@ border-bottom: 1px solid #ccc;
 .index-footer .author{
   font-size: 10px;
 }
+.modal-body{
+  
+  text-indent: 2em;
+  padding: 40px;
+  line-height: 50px;
+}
+.modal-body p{
+font-family: "微软雅黑" 
+}
