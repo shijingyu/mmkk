@@ -80,7 +80,7 @@ Main components
 }
 @media only screen and (min-width: 768px) {
   .cd-main-content {
-    padding-top: 70px;
+    padding-top: 49px;
   }
 }
 
@@ -115,7 +115,7 @@ header.is-fixed {
 }
 @media only screen and (min-width: 768px) {
   header {
-    height: 70px;
+    height: 50px;
   }
 }
 
@@ -166,7 +166,6 @@ header.is-fixed {
     display: block;
   }
 }
-
 #cd-menu-trigger {
   position: absolute;
   right: 0;
@@ -243,7 +242,7 @@ header.is-fixed {
   }
   #cd-menu-trigger .cd-menu-text {
     display: inline-block;
-    line-height: 70px;
+    line-height: 55px;
   }
   #cd-menu-trigger .cd-menu-icon {
     left: auto;
@@ -282,6 +281,7 @@ header.is-fixed {
 }
 #cd-lateral-nav .cd-navigation {
   margin: 10px 0 16px;
+  list-style: none;
 }
 #cd-lateral-nav .sub-menu {
   padding: 0 10px 20px 15px;
@@ -303,6 +303,7 @@ header.is-fixed {
 @media only screen and (min-width: 768px) {
   #cd-lateral-nav .cd-navigation {
     margin: 20px 0;
+    list-style: none;
   }
 }
 #cd-lateral-nav.lateral-menu-is-open {

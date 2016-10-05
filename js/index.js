@@ -32,3 +32,6 @@ $(function(){
 	windowScroll();
 	mobileClickSubMenus();
 });
+$('.carousel').carousel({
+  interval: 3000
+})
