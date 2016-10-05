@@ -31,14 +31,7 @@ body
 	background: url(../images/artical_03.png) no-repeat 250px 10px;
 	background-color: #0099ff;
 }
-.navbar .container
-{
-	height: 50px;
-}  
-#bs-example-navbar-collapse-1  
-{
-	height: 50px;
-}  
+ 
 footer
 {
 	height: 50px;
@@ -68,20 +61,15 @@ footer .container p
 	/*height: auto;*/
 }
 
-.sidebar
-{
-	width: 50px;
 
-}
 .sidebar {
-
+    width: 50px;
 	list-style:none;
 	position: fixed;
 	width: 54px;
 	right: 80px;
 	bottom: 70px;	
 	border-radius: 5px;
-	border: 1px solid #ccc;
 	overflow: hidden;
 }
 .sidebar  li{    
