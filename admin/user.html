@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Admin-Article</title>
+<meta name="Copyright" content="Douco Design.">
+<link href="./admin/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./admin/jquery.min.js.下载"></script>
+<script type="text/javascript" src="./admin/global.js.下载"></script>
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+ <div id="head">
+  <div class="logo"><a href=""><img src="./admin/dclogo.gif" alt="logo"></a></div>
+  <div class="nav">
+   <ul>
+    <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
+     <div class="drop mTopad">
+      <a href="">商品</a> 
+      <a href="">文章</a> 
+      <a href="">自定义导航</a> 
+      <a href="">首页幻灯</a>
+      <a href="">单页面</a>
+      <a href="">管理员</a> 
+      <a href="">友情链接</a> 
+     </div>
+    </li>
+    <li><a href="" target="_blank">查看站点</a></li>
+    <li><a href="">清除缓存</a></li>
+    <li><a href="" target="_blank">帮助</a></li>
+   <!--  <li class="noRight"><a href="">DouPHP+</a></li> -->
+   </ul>
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     <div class="drop mUser">
+      <a href="">编辑我的个人资料</a>
+      <a href="">设置云账户</a>
+     </div>
+    </li>
+    <li class="noRight"><a href="">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+ <ul class="top">
+  <li><a href=""><i class="home"></i><em>管理首页</em></a></li>
+ </ul>
+<!--  <ul>
+  <li><a href=""><i class="system"></i><em>系统设置</em></a></li>
+  <li><a href=""><i class="nav"></i><em>自定义导航栏</em></a></li>
+  <li><a href=""><i class="show"></i><em>首页幻灯广告</em></a></li>
+  <li><a href=""><i class="page"></i><em>单页面管理</em></a></li>
+ </ul> -->
+    <ul>
+  <li  class="cur"><a href="user.html"><i class="productCat"></i><em>查看会员</em></a></li>
+  <li><a href="resouce.html"><i class="product"></i><em>查看资源</em></a></li>
+ </ul>
+  <ul>
+  <li><a href="ArtType.html"><i class="articleCat"></i><em>文章分类</em></a></li>
+  <li><a href="Art.html"><i class="article"></i><em>文章列表</em></a></li>
+ </ul>
+   <ul class="bot">
+<!--   <li><a href=""><i class="backup"></i><em>数据备份</em></a></li>
+  <li><a href=""><i class="mobile"></i><em>手机版</em></a></li>
+  <li><a href=""><i class="theme"></i><em>设置模板</em></a></li>
+  <li><a href=""><i class="manager"></i><em>网站管理员</em></a></li> -->
+  <li><a href="admin.html"><i class="managerLog"></i><em>操作记录</em></a></li>
+ </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">DouPHP 管理中心<b>&gt;</b><strong>查看会员</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="http://demo.douco.com/admin/article.php?rec=add" class="actionBtn add">添加会员</a>查看会员</h3>
+    <div class="filter">
+    <form action="http://demo.douco.com/admin/article.php" method="post">
+     <select name="cat_id">
+      <option value="0">未分类</option>
+                  <option value="1"> 公司动态</option>
+                        <option value="2"> 行业新闻</option>
+                 </select>
+     <input name="keyword" type="text" class="inpMain" value="" size="20">
+     <input name="submit" class="btnGray" type="submit" value="筛选">
+    </form>
+    <!-- <span>
+        <a class="btnGray" href="http://demo.douco.com/admin/article.php?rec=sort">开始筛选首页文章</a>
+        </span> -->
+    </div>
+        <div id="list">
+    <form name="action" method="post" action="http://demo.douco.com/admin/article.php?rec=action">
+  <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tbody><tr>
+        <th width="200" align="left">账号</th>
+        <th align="left">密码</th>
+        <th align="left">注册时间</th>
+       <th width="200" align="center">QQ</th>
+        <th width="80" align="center">操作</th>
+     </tr>
+            <tr>
+        <td align="left"> <a href="http://demo.douco.com/admin/product.php?cat_id=1">电子数码</a></td>
+        <td>digital</td>
+        <td>电子产品销售</td>
+        <td align="center">10</td>
+        <td align="center"><a href="http://demo.douco.com/admin/product_category.php?rec=edit&amp;cat_id=1">编辑</a> | <a href="http://demo.douco.com/admin/product_category.php?rec=del&amp;cat_id=1">删除</a></td>
+     </tr>
+            <tr>
+        <td align="left">- <a href="http://demo.douco.com/admin/product.php?cat_id=4">智能手机</a></td>
+        <td>phone</td>
+        <td>智能手机销售</td>
+        <td align="center">50</td>
+        <td align="center"><a href="http://demo.douco.com/admin/product_category.php?rec=edit&amp;cat_id=4">编辑</a> | <a href="http://demo.douco.com/admin/product_category.php?rec=del&amp;cat_id=4">删除</a></td>
+     </tr>
+
+          </tbody></table>
+    <div class="action">
+     <select name="action" onchange="douAction()">
+      <option value="0">请选择...</option>
+      <option value="del_all">删除</option>
+      <option value="category_move">移动分类至</option>
+     </select>
+     <select name="new_cat_id" style="display:none">
+      <option value="0">未分类</option>
+                  <option value="1"> 公司动态</option>
+                        <option value="2"> 行业新闻</option>
+                 </select>
+     <input name="submit" class="btn" type="submit" value="执行">
+    </div>
+    </form>
+    </div>
+    <div class="clear"></div>
+    <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="http://demo.douco.com/admin/article.php?page=1">第一页</a> 上一页 下一页 <a href="http://demo.douco.com/admin/article.php?page=1">最末页</a></div>           </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+
+</body></html>
