@@ -17,8 +17,8 @@
     <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
      <div class="drop mTopad"><a href="addres.html">资源</a> <a href="addarticle.html">文章</a>  <a href="#">管理员</a> <a href="link.html"></a> </div>
     </li>
-    <li><a href="www.shitouboy.com" target="_blank">查看站点</a></li>
-    <li class="noRight"><a href="www.shitouboy.com/about.html">MkStone+</a></li>
+    <li><a href="index.html" target="_blank">查看站点</a></li>
+    <li class="noRight"><a href="about.html">MkStone+</a></li>
    </ul>
    <ul class="navRight">
     <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
