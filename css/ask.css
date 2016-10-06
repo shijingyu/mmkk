@@ -16,7 +16,7 @@ nav{
 	height: 112px;
 	background-color: #ccc;
 	margin-bottom: 40px;
-	padding-top: 10px;
+	padding-top: 8px;
 	text-align: center;
 }
 
@@ -35,25 +35,52 @@ nav{
 }
 .select{
 	display:inline-block;
- vertical-align: middle;
+	height: auto;
+	background-color: #f0f0f0;
+	border: 1px solid #4e6361;
+	border-radius: 2px;
+	padding-right: 4px;
+ 
 }
 .select select{
 	display: inline-block;
-	width: auto;
+	width: 90px;
+	height: 30px;
+    vertical-align: middle;
 	color: #7088a9;
-	padding-right: 10px;
+	padding-right: 20px;
 	cursor: pointer;
 	background-color: #f0f0f0;
+	border: none;
 	line-height: 1;
 	border-radius:2px;
 
 }
+.formcontrol{
+	height: 36px;
+	padding: 8px 13px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #7088a9;
+	background-color: #e8ecf3;
+	border-radius: 4px;
+	transition: border-color .15s,background .15s;
+
+}
+
+.refresh{
+	float: right;
+}
 
 /*discussion list*/
 
-.dis-list ul{
+ul{
     list-style: none;
 
+}
+.dis-list{
+ margin-top: 40px;
+ height: 1500px;
 }
 
 .dis-list li{
@@ -79,6 +106,10 @@ nav{
 .dis-list-item:hover{
    background-color: #ccc;
 }
-.modal{
+.icon-comments{
+	float: right;
 
+}
+.describe{
+	font-size: 12px;
 }

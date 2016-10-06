@@ -30,6 +30,21 @@ a {
   color: #6cac70;
   text-decoration: none;
 }
+select{
+  display: inline-block;
+  width: auto;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: #fff;
+  outline: 0;
+  
+}
+option{
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0 2px 1px;
+}
 
 /* -------------------------------- 
 
@@ -57,7 +72,7 @@ Main components
   /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
   min-height: 100%;
   position: relative;
-  background-color: #f5f4e9;
+  background-color: #fff;
   z-index: 2;
   padding-top: 50px;
   /* Force Hardware Acceleration in WebKit */

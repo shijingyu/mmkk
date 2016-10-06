@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>index</title>
+    <title>mkStone</title>
 
     <!-- Bootstrap -->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -30,12 +30,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      
-      <form class="navbar-form navbar-left" role="search">
+      <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> -->
       <ul class="nav navbar-nav navbar-right ">
 <!--         <li><div style="margin-right:30px" type="button" class="btn btn-default navbar-btn"><a href="login_register.html">Sign in</a></div></li>
  -->        <a href="about.html" class="navbar-brand" id="navbar-r">about</a>
@@ -44,14 +44,21 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<aside id="index-aside" style="background-image:url(images/404-bg.jpg)"></aside>
+<aside id="index-aside" style="background-image:url(images/index-re_01.png)">
+  <div class="container">
+  <div class="index-d">
+    <p id="describe-1">欢迎来到<span id="mk">Mk</span><span>Stone</span></p>
+    <p id="describe-2"><span></span>纯粹的技术分享小站</p>
+  </div>
+  </div>
+</aside>
 
 <div class="index-intro">
   <div class="container">
     
     <div class="row">
       <div class="col-md-12">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -62,13 +69,13 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <p>我们是一个团队！</p>
+      <p>本站由一个4人团队打造，功能正在不断完善中……</p>
       <div class="carousel-caption">
         
       </div>
     </div>
     <div class="item">
-      <p>mkStone网站正在搭建中……</p>
+      <p>如果您喜欢随时都可以来看看，见证我们的成长^-^</p>
       <div class="carousel-caption">
         
       </div>
@@ -86,49 +93,74 @@
     <span class="sr-only">Next</span>
   </a> -->
 </div>
-       <!--  <h2>mkStone网站正在搭建中……</h2>
-        <div type="button" data-toggle="modal" data-target="#myModal" class="btn btn-outline btn-lg">查看介绍</div> -->
+        <!-- <h2>mkStone网站正在搭建中……</h2> -->
+        <div type="button" data-toggle="modal" data-target="#myModal" class="btn btn-outline btn-lg" id="update-txt">更新日志</div>
 
       </div>
     </div>
   </div>
 </div>
-
 <div class="index-func">
-  <div class="container">
-  <h2>mkSton网站正在搭建中……</h2>
+<div class="index-head"><p>Function<span>功能</span></p></div>
+<div class="hr"></div>
+
+<div class="index-func-main">
+
+
+  <div class="container-main">
+
     <div class="row">
-      <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="col-md-3 col-sm-12 col-xs-12">
       
 
         <ul class="grid">
          <li class="cs-style-4">
            <figure style="width:210px;">
-           <div><a href="article.html"><img src="images/article.png" alt="img05"></a></div>
-
+           <div class="jqhover-main">
+           <div class="jqhover-border"><a href="article.html"><img src="images/article.png" alt="img05"></a>
+           <p class="fun-name">文章分享</p>   
+           </div>
+           <div class="fun-describe"><p>不定时更新网络趋势、科技前沿、技术心得等相关文章。</p>
+            <p class="getmore"><a href="article.html">获取更多></a></p>
+           </div>
+           </div>
            </figure>
          </li>
         </ul> 
 
      </div>
-      <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="col-md-3 col-sm-12 col-xs-12">
     
          <ul class="grid">
          <li class="cs-style-4">
            <figure style="width:210px;">
-           <div><a href="ask.html"><img src="images/ask.png" alt="img05"></a></div>
+           <div class="jqhover-main">
+           <div class="jqhover-border"><a href="download.html"><img src="images/download.png" alt="img05"></a>
+           <p class="fun-name">资源下载</p>   
+           </div>
+           <div class="fun-describe"><p>提供各种免费、实用的插件，下载工具，办公软件等。</p>
+            <p class="getmore"><a href="download.html">获取更多></a></p>
+           </div>
+           </div>
 
            </figure>
          </li>
         </ul>
       </div>
       
-      <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="col-md-3 col-sm-12 col-xs-12">
         
          <ul class="grid">
          <li class="cs-style-4">
            <figure style="width:210px;">
-           <div><a href="index.html"><img src="images/download.png" alt="img05"></a></div>
+           <div class="jqhover-main">
+           <div class="jqhover-border"><a href="ask.html"><img src="images/ask.png" alt="img05"></a>
+           <p class="fun-name">问题讨论</p>   
+           </div>
+           <div class="fun-describe"><p>一个专门的问题交流版块，在这里畅所欲言，结交更多爱学习的伙伴！</p>
+            <p class="getmore"><a href="ask.html">获取更多></a></p>
+           </div>
+           </div>
 
            </figure>
          </li>
@@ -136,13 +168,19 @@
          
       </div>
       
-      <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="col-md-3 col-sm-12 col-xs-12">
         
          <ul class="grid">
          <li class="cs-style-4">
            <figure style="width:210px;">
-           <div><a href="index.html"><img src="images/other.jpg" alt="img05"></a></div>
-           
+           <div class="jqhover-main">
+           <div class="jqhover-border"><a href="index.html"><img src="images/other.png" alt="img05"></a>
+           <p class="fun-name">其他</p>   
+           </div>
+           <div class="fun-describe"><p>开发人员正紧急开发中，尽请期待！</p>
+            <p class="getmore"><a href="other.html">获取更多></a></p>
+           </div>
+           </div>
            </figure>
          </li>
         </ul>
@@ -154,8 +192,12 @@
   </div>
 
 </div>
+</div>
 <!-- 轮播图 -->
 <div class="lb">
+<div class="index-head"><p>Latest<span>最新发布</span></p></div>
+<div class="hr"></div>
+<div class="carousel-main">
 <div class="container">
   
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -194,6 +236,7 @@
   </a>
 </div>
 
+</div>
 </div>
 
 </div>

@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/aside/style.css">
     <link rel="stylesheet" href="css/ask.css">
-    <link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/aside/sidebar-menu.css">
      <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -40,8 +40,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        <li><a href="index.html">首页</a></li>
-            <li class="active"><a href="article.html">文章</a></li>
-            <li><a href="">问答</a></li>
+            <li><a href="article.html">文章</a></li>
+            <li class="active"><a href="">问答</a></li>
             <li><a href="download.html">资源</a></li>
             <li><a href="about.html">关于</a></li>
       </ul>
@@ -117,16 +117,19 @@
         <ul class="toolbar-view">
         <li class="item-sort">
         <span class="select">
-          <select name="" id="">
+          <select class="formcontrol">
              <option value="latest">最新回复</option>
              <option value="top">热门话题</option>
              <option value="newest">最新话题</option>
              <option value="oldest">最旧话题</option>
+            
           </select>
-         
+         <span><i class="icon-sort"></i></span>
        </span>
        </li>
-       </ul>
+       </ul><span>
+       <ul class="refresh"><li><button title="刷新" class="Button Button--icon hasIcon" type="button"><i class="icon-repeat"></i></button></li></ul>
+       </span>
        </div>   
 <!-- discussion list -->
 <div class="dis-list">
@@ -136,8 +139,9 @@
     <div class="dis-list-item-content">
       <a href="" class="dlic-head"><img  class="img-circle img-thumbnail" src="images/open_photo_temp3.jpg" alt=""></a>
       <div  type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
-      <strong>目前你面临的最大困惑是什么？</strong><br><p>目前你面临的最大困惑是什么？</p><i class=""></i>
+      <strong>目前你面临的最大困惑是什么？</strong><br><p class="describe">目前你面临的最大困惑是什么？</p>
       </div>
+      <i class="icon-comments icon-3x"></i>
     </div>  
 
     </div>
