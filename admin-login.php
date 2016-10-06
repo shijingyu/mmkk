@@ -1,8 +1,8 @@
 <?PHP
     header("Content-Type: text/html; charset=utf8");
-    if(!isset($_POST["submit"])){
-        exit("错误执行");
-    }//检测是否有submit操作 
+//     if(!isset($_POST["submit"])){
+//         exit("错误执行");
+//     }//检测是否有submit操作 
 
 
     include('MkStone_Connect.php');//链接数据库
