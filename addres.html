@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MkStone 管理中心</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+</head>
+<body>
+<div id="dcWrap"> <div id="dcHead">
+ <div id="head">
+  <div class="logo"><a href="iiindex.html"><img src="images/dclogo.gif" alt="logo"></a></div>
+  <div class="nav">
+   <ul>
+    <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
+     <div class="drop mTopad"><a href="addres.html">资源</a> <a href="addarticle.html">文章</a>  <a href="#">管理员</a> <a href="link.html"></a> </div>
+    </li>
+    <li><a href="www.shitouboy.com" target="_blank">查看站点</a></li>
+    <li class="noRight"><a href="www.shitouboy.com/about.html">MkStone+</a></li>
+   </ul>
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     <div class="drop mUser">
+      <a href="#">编辑我的个人资料</a>
+    
+     </div>
+    </li>
+    <li class="noRight"><a href="login.php?rec=logout">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+ <ul class="top">
+  <li><a href="iiindex.html"><i class="home"></i><em>管理首页</em></a></li>
+ </ul>
+ 
+   <ul>
+ 
+  <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
+ </ul>
+  <ul>
+  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+ </ul>
+  <ul>
+  <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
+ </ul>
+   <ul class="bot">
+  <li><a href="backup.html"><i class="backup"></i><em>数据备份</em></a></li>
+
+  <li><a href="manager.html"><i class="manager"></i><em>网站管理员</em></a></li>
+  <li><a href="manager_log.htm"><i class="managerLog"></i><em>操作记录</em></a></li>
+ </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">MkStone 管理中心<b>></b><strong>添加资源</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="res.php" class="actionBtn">资源列表</a>添加资源</h3>
+    <form action="addres.php" method="post" enctype="multipart/form-data">
+     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+      <tr>
+       <td width="90" align="right">资源名称</td>
+       <td>
+        <input type="text" name="name" value="" size="80" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td align="right">资源分类</td>
+       <td>
+        <select name="cat_id">
+         <option value="0">未分类</option>
+                          <option value="破解">破解</option>
+                        <option value="稀有">稀有</option>
+                        <option value="珍藏">珍藏</option>
+                          </select>
+       </td>
+      </tr>
+      <tr>
+       <td align="right">资源大小</td>
+       <td>
+        <input type="text" name="space" value="0" size="40" class="inpMain" />
+       </td>
+      </tr>
+            <tr>
+       <td align="right" valign="top">资源描述</td>
+       <td>
+        <!-- KindEditor -->
+			<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
+			<link rel="stylesheet" href="js/kindeditor/plugins/code/prettify.css" />
+			<script charset="utf-8" src="js/kindeditor/kindeditor.js"></script>
+			<script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
+			<script charset="utf-8" src="js/kindeditor/plugins/code/prettify.js"></script>
+        <script>
+					KindEditor.ready(function(K) {
+						var editor1 = K.create('textarea[name="content"]', {
+							cssPath : '../plugins/code/prettify.css',
+							uploadJson : '../php/upload_json.php',
+							fileManagerJson : '../php/file_manager_json.php',
+							allowFileManager : true,
+							afterCreate : function() {
+								var self = this;
+								K.ctrl(document, 13, function() {
+									self.sync();
+									K('form[name=example]')[0].submit();
+								});
+								K.ctrl(self.edit.doc, 13, function() {
+									self.sync();
+									K('form[name=example]')[0].submit();
+								});
+							}
+						});
+						prettyPrint();
+					});
+			</script>
+        <!-- /KindEditor -->
+        <textarea id="content" name="content" style="width:780px;height:400px;" class="textArea"></textarea>
+       </td>
+      </tr>
+      <tr>
+       <td align="right">缩略图</td>
+       <td>
+        <input type="file" name="image" size="38" class="inpFlie" />
+        <img src="images/icon_no.png"></td>
+      </tr>
+      
+      <tr>
+       <td align="right">资源链接</td>
+       <td>
+        <input type="text" name="http" value="" size="150" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td></td>
+       <td>
+        <input type="hidden" name="token" value="21307217" />
+        <input type="hidden" name="id" value="">
+        <input name="submit" class="btn" type="submit" value="提交" />
+       </td>
+      </tr>
+     </table>
+    </form>
+           </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2016 MkStone，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+</body>
+</html>
