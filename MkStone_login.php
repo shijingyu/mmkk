@@ -21,7 +21,7 @@ if($result = mysql_fetch_array($check_query)){
 
     echo "<<script>
 
-    alert('登录成功');location.href='article.html'
+    alert('登录成功');location.href='article.php'
 
 
     </script>";
