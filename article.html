@@ -79,12 +79,12 @@
 
  <!-- 主体内容开始 -->
 <div class="container">
-  <div class="row">
+
   
 
-      <!-- 右边瀑布流开始 -->
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="main">
+      <!-- 瀑布流开始 -->
+      
+        <div class="main" id="masonry">
            <!-- 瀑布流小块 -->
           <div class="box" type="button" data-toggle="modal" data-target="#myModal">
               <img src="images/artical_14.png" alt="">
@@ -373,9 +373,9 @@
           
         </div>
 
-      </div>
-      <!-- 右边瀑布流结束 -->
-    </div>
+      
+      <!-- 瀑布流结束 -->
+    
      
   
 
@@ -473,6 +473,7 @@
 
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/masonry-docs.min.js"></script>
      <!--  侧边栏js -->
 <script>
 $(document).ready(function(){
@@ -481,5 +482,20 @@ $(document).ready(function(){
 });
 })
 </script>
+
+<script>
+  
+$(function() {
+    var $container = $('#masonry');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+                itemSelector: '.box',
+                gutter: 20,
+                isAnimated: true,
+            });
+     });
+});
+</script>
+
   </body>
 </html>
