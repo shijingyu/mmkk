@@ -42,7 +42,7 @@
   <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
  </ul>
   <ul>
-  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+  <li><a href="article_show.php"><i class="article"></i><em>文章列表</em></a></li>
  </ul>
   <ul>
   <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
@@ -107,7 +107,7 @@ while($row=mysql_fetch_assoc($result))
     </form>
     </div>
     <div class="clear"></div>
-    <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="article.php?page=1">第一页</a> 上一页 下一页 <a href="article.php?page=1">最末页</a></div>           </div>
+    <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="article_show.php?page=1">第一页</a> 上一页 下一页 <a href="article_show.php?page=1">最末页</a></div>           </div>
  </div>
  <div class="clear"></div>
 <div id="dcFooter">

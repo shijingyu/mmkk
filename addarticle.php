@@ -31,7 +31,7 @@ if($num>=1)
     else{ 
 
 echo "<script>
-                         alert('文章添加成功');location.href='article.php'</script>";
+                         alert('文章添加成功');location.href='article_show.php'</script>";
 
 
 }

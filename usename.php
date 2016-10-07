@@ -42,7 +42,7 @@
   <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
  </ul>
   <ul>
-  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+  <li><a href="article_show.php"><i class="article"></i><em>文章列表</em></a></li>
  </ul>
   <ul>
   <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
@@ -60,7 +60,7 @@
         <h3>会员列表</h3>
     
         <div id="list">
-    <form name="action" method="post" action="article.php?rec=action">
+    <form name="action" method="post" action="article_show.php?rec=action">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      <tr>
       <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
