@@ -101,8 +101,10 @@ $q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo" <div class='box' type='button' data-toggle='modal' data-target='#myModal'>
+
+ echo" <div class='box' type='button' data-toggle='modal' data-target='#".$row['uid']."'>
               <img src='images/artical_16.png' alt=''>
+
               <p>".$row['articlename']."</p>
               <p>".$row['fenlei']."</p>
               <p>".$row['upload']."</p>
@@ -119,6 +121,38 @@ while($row=mysql_fetch_assoc($result))
                 1437
               </p>       
           </div>
+
+<div class='modal fade' id='".$row['uid']."' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+        <h4 class='modal-title' id='myModalLabel'>MkStone</h4>
+      </div>
+      <div class='modal-body'>
+        <div class='md-header'>
+          <h1>".$row['articlename']."</h1>
+
+
+        </div>
+        <div class='mb-content'>
+        
+          <img src='images/lb2.jpg' alt=''>  
+          
+
+          <p>".$row['content']."</p>
+
+
+        </div>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
           ";
 
@@ -186,45 +220,6 @@ while($row=mysql_fetch_assoc($result))
  </footer>
  <!-- 底部结束 -->
 
-
-<?php  
-
-while($row=mysql_fetch_assoc($result))
-{
-
-echo"
-<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-  <div class='modal-dialog'>
-    <div class='modal-content'>
-      <div class='modal-header'>
-        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
-        <h4 class='modal-title' id='myModalLabel'>MkStone</h4>
-      </div>
-      <div class='modal-body'>
-        <div class='md-header'>
-          <h1>".$row['articlename']."</h1>
-
-
-        </div>
-        <div class='mb-content'>
-          <img src='mages/lb2.jpg' alt=''>
-          <p>".$row['content']."</p>
-
-
-        </div>
-      </div>
-      <div class='modal-footer'>
-        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-";
-}
-
-
-?>
 
 
  
