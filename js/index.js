@@ -1,4 +1,4 @@
-//window scroll
+// window scroll
 var windowScroll=function(){
 $(window).scroll(function(){
 
@@ -12,6 +12,7 @@ $(window).scroll(function(){
 	}
 
 });
+
 
 // Superfish Sub Menu Click ( Mobiles/Tablets )
 

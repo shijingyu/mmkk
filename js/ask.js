@@ -1,6 +1,6 @@
 $(function(){
-	$('.nav li').click(function(){
-              $('.nav li').removeClass('active');
+	$('#Q-type li').click(function(){
+              $('#Q-type li').removeClass('active');
               $(this).addClass('active');
 
             });
@@ -45,4 +45,15 @@ $(function(){
 //     }); 
 // });
   
- 
+ $(function(){
+ 	$('#ask-btn').click(function(){
+        // $('.addQuestion').attr('style','display:block');
+         $('.addQuestion').slideToggle(400);
+ 	});
+ });
+ $(function(){
+ 	$('#ask-close').click(function(){
+        // $('.addQuestion').attr('style','display:block');
+         $('.addQuestion').slideUp(400);
+ 	});
+ });
