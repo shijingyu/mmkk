@@ -106,7 +106,7 @@ $q = "select * from stone";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["id"]."</td><td align='left'>".$row["usename"]."</td><td align=left>".$row["password"]."</td><td align='left'>".$row["mail"]."</td>.<td align='center'><a href='delus.php?rec=del&id=9'>删除</a></td></tr>";
+ echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["id"]."</td><td align='left'>".$row["usename"]."</td><td align=left>".$row["password"]."</td><td align='left'>".$row["mail"]."</td>.<td align='center'><a href='delete.php?action1=del&usenameid=".$row["id"]."'>删除</a></td></tr>";
   
   
 }

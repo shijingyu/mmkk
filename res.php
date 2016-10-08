@@ -84,7 +84,7 @@ $q = "select * from res";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["rid"]."</td><td align='left'>".$row["resname"]."</td><td align='left'>".$row["http"]."</td><td align='center'>".$row["resfenlei"]."</td>.<td align='center'><a href='delus.php?rec=del&id=9'>删除</a></td></tr>";
+ echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["rid"]."</td><td align='left'>".$row["resname"]."</td><td align='left'>".$row["http"]."</td><td align='center'>".$row["resfenlei"]."</td>.<td align='center'><a href='delete.php?action2=del&resid=".$row["rid"]."'>删除</a></td></tr>";
   
   
 }

@@ -59,6 +59,9 @@
 <div id="urHere">MkStone 管理中心<b>></b><strong>文章列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="addarticle.html?rec=add" class="actionBtn add">添加文章</a>文章列表</h3>
     
+
+    <form name="action" method="get" action="delete.php">
+
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      <tr>
       <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
@@ -79,9 +82,8 @@ $q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td>.<td align='center'><a href='delus.php?rec=del&id=9'>删除</a></td></tr>";
-  
-  
+ echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td>.<td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td></tr>";
+ 
 }
 
 
