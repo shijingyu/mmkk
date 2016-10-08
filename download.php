@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Download</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/single.css">
 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/download.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/3.4.2/respond.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
-   <!-- 头部开始 -->
+  <!-- 头部开始 -->
   <header>
   <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
   <div class="container">
@@ -35,9 +36,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        <li><a href="index.html">首页</a></li>
-            <li><a href="article.html">文章</a></li>
+            <li><a href="article.php">文章</a></li>
             <li><a href="ask.html">问答</a></li>
-            <li class="active"><a href="download.html">资源</a></li>
+            <li class="active"><a href="download.php">资源</a></li>
             <li><a href="about.html">关于</a></li>
       </ul>
       
@@ -61,8 +62,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/artical_09.png" style="width: 18px;" alt="" ><span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="article.html">个人资料</a></li>
-            <li><a href="article.html">退出</a></li>
+            <li><a href="my.php">个人资料</a></li>
+            <li><a href="article.php">退出</a></li>
           </ul>
         </li>
       </ul>
@@ -75,69 +76,80 @@
 </header>
 <!-- 头部结束 -->
 
+<!-- 正文 -->
+<div class="content">
+  <div class="container">
+  <h1>资源下载</h1>
+    <ol class="breadcrumb">
+      <li><a href="#">主页</a></li>
+      <li><a href="#">资源</a></li>
+      <li class="active">type</li>
+    </ol>
+    <!-- 栅格布局 -->
+    <div class="row">
+            <!-- 文章左边 -->
+           <div class="content-l col-md-10">
+             
+             
+<?php
 
-<!-- 正文开始 -->
-  <div class="content">
-    <!-- 居中容器 -->
-    <div class="container">
-    <!-- 栅格 -->
+  header("Content-Type: text/html; charset=utf8");
+   // if(!isset($_POST["submit"])){
+      //  exit("错误执行");
+   // }//检测是否有submit操作 
 
-    <!-- 路径导航 -->
-          <ol class="breadcrumb">
-            <li><a href="#">主页</a></li>
-            <li><a href="#">资源</a></li>
-            <li class="active">type</li>
-          </ol>
-      <div class="row">
-         <!-- single页的左边 -->
-        <div class="single_l   col-md-10">
-        
+include('MkStone_Connect.php');//链接数据库
+$q = "select * from res";
+$result = mysql_query($q);
+while($row=mysql_fetch_assoc($result))
+{
 
-         <h1>Shadowsocks 3.3.2（影梭）正式版</h1>
-         <!-- 软件图片 -->
-         <div class="row">
-           <div class="single-img col-md-4">
-             <img style="height: 170px;" src="images/single-1.jpg" alt="">
+        echo"
+    
+                <div class='box row'>
+                  
+                  <div class='download-img col-md-2'>
+
+                  <a href='single.html'><img src='images/source_03.png' alt=''></a>
+                
+                </div>
+               
+                  <div class='download-dec col-md-10'>
+                   
+                    <h1>".$row['resname']."</h1>
+                    <p class='dec1'>                
+                        ".$row['recontent']."
+                    </p>
+                    <p class='dec2'>
+                        <span>大小</span>：".$row['space']."  &nbsp;     <span>上传时间</span>：".$row['uptime']." &nbsp;<span>软件类型</span>：".$row['resfenlei']." <br> 
+                        <span>语言</span>：".$row['language']."&nbsp; &nbsp;&nbsp; &nbsp;<span>支持系统</span>：".$row['support']."
+                    </p>
+                    <a href='".$row['http']."'>
+                      <button type='button' class='btn btn-primary'>立即下载</button>
+                    </a>
+                  </div>
+                </div>
+
+
+
+";
+                
+}
+
+?>
+                
+
+
+
+
+
+
+
+
+
            </div>
-           <!-- 软件简短描述 -->
-           <div class="single-ms col-md-8" >
-             <p><span>大小</span>：56M <span><br>版本</span>：8.6.38804.0<br>
-<span>位数</span>：32/64 <br><span>更新日期</span>：2036-09-09<br>
-<span>支持系统</span>：WinXP/Win7/Win8/Win10</p>
-            <a href="#"><button type="bu.contentton" class="btn btn-primary">高速下载</button></a>
-           </div>
-
-          </div>
-
-
-           <div class="jianjie">
-             <p class="ptitle">功能简介</p>
-<p>腾讯推出的即时通讯工具。支持在线聊天、视频电话、点对点断点续传文件、共享文件、网络硬盘、自定义面板、QQ邮箱等多种功能。免费的通讯平台，QQ2035年给您带来更多沟通乐趣。<br>
-开发商：腾讯<br>
-软件官网： http://im.qq.com/pcqq/<br></p>
-<p  class="ptitle">新版特征</p>
-<p>
-1、聊天时可发起"演示白板"，随心涂画辅助沟通；<br>
-2、新增群日历，可查看节日、群活动等精彩事件；<br>
-3、文件共享，便捷分享本地文件；<br>
-4、群聊通话管理，有序发言，掌控全场；<br>
-5、团队通讯录，快速查看群成员电话。<br>
-</p>
-           </div>
-           <div class="xsjis">
-             <p class="ptitle">部分截图</p>
-             <img src="images/3.jpg" alt="">
-             <img src="images/3.jpg" alt="">
-             <img src="images/3.jpg" alt="">
-             <img src="images/3.jpg" alt="">
-             <img src="images/3.jpg" alt="">
-           </div>
-
-
-        </div>
-        <!-- single页左边-end -->
-
-        <div class="single_r col-md-2">
+           <!-- 文章右边 -->
+           <div class="content-r col-md-2">
                <p class="p1">
                   本站收集了各种实用的PC和移动端应用，团队不定时进行软件的发布及补档，如果您发现资源过期了请及时留言联系我们。<br>
                   xy960722@gmail.com
@@ -147,25 +159,32 @@
                   <img style="width:180px" src="images/erweima.jpg" alt="">
                </p>
            </div>
-           <!-- single右边-end -->
-
-      </div>
-      <!-- 栅格-end -->
-
+           <!-- 文章右边-end -->
+        </div>
+        <!-- 栅格布局-end -->
     </div>
     <!-- 居中容器-end -->
-      
-  </div>
-<!-- 正文-end -->
-  <!-- 底部开始 -->
- <footer>
-   <div class="container">
-     <p>Copyright © 2016.kangml.com All rights reserved. <span><a href="">赞助</a></span></p>
-   </div>
- </footer>
- <!-- 底部结束 -->
+</div>
+     <!-- 正文结束 -->
 
- <!-- 侧边栏开始 -->
+<!-- 分页 -->
+<nav>
+<div class="container">
+  <ul class="pagination pagination-lg">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+  </div>
+</nav>
+
+<!-- 分页-end -->
+
+<!-- 侧边栏开始 -->
  <ul class="sidebar">
     <li class="li2">
       <a href="">收藏</a>
@@ -186,15 +205,17 @@
   </ul>  
 <!-- 侧边栏-end -->
 
-
-
-
-
+  <!-- 底部开始 -->
+ <footer>
+   <div class="container">
+     <p>Copyright © 2016 MkStone  All rights reserved. <span><a href="">赞助</a></span></p>
+   </div>
+ </footer>
+ <!-- 底部结束 -->
 
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-<!--  侧边栏js -->
+         <!--  侧边栏js -->
 <script>
 $(document).ready(function(){
   $("#gotop").click(function(){
@@ -202,6 +223,9 @@ $(document).ready(function(){
 });
 })
 </script>
-<!-- 侧边栏js-end -->
+<script type="text/javascript">
+$(function () {$('img').hover(function() {
+$(this).fadeTo("fast", 0.3);},
+function() {$(this).fadeTo("fast", 1);});});</script>
   </body>
 </html>

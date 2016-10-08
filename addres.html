@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MkStone 管理中心</title>
 <meta name="Copyright" content="Douco Design." />
@@ -42,7 +42,7 @@
   <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
  </ul>
   <ul>
-  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+  <li><a href="article_show.php"><i class="article"></i><em>文章列表</em></a></li>
  </ul>
   <ul>
   <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
@@ -80,9 +80,22 @@
       <tr>
        <td align="right">资源大小</td>
        <td>
-        <input type="text" name="space" value="0" size="40" class="inpMain" />
+        <input type="text" name="space" placeholder="10MB" size="40" class="inpMain" />
        </td>
       </tr>
+<tr>
+       <td align="right">支持系统</td>
+       <td>
+        <input type="text" name="support" placeholder="Windows7/8/10/Mac OS" size="40" class="inpMain" />
+       </td>
+      </tr>
+      <tr>
+       <td align="right">语言</td>
+       <td>
+        <input type="text" name="language" placeholder="中文" size="40" class="inpMain" />
+       </td>
+      </tr>
+
             <tr>
        <td align="right" valign="top">资源描述</td>
        <td>
@@ -118,10 +131,21 @@
         <textarea id="content" name="content" style="width:780px;height:400px;" class="textArea"></textarea>
        </td>
       </tr>
+      
+
+<tr>
+       <td align="right">上传时间</td>
+       <td>
+        <input type="text" name="uptime" placeholder="2016-10-10" size="40" class="inpMain" />
+       </td>
+      </tr>
+
+
+
       <tr>
        <td align="right">缩略图</td>
        <td>
-        <input type="file" name="image" size="38" class="inpFlie" />
+        <input type="" name="image" size="38" class="inpFlie" />
         <img src="images/icon_no.png"></td>
       </tr>
       

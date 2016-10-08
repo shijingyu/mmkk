@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MkStone 管理中心</title>
@@ -56,61 +56,87 @@
 </div></div>
  <div id="dcMain">
    <!-- 当前位置 -->
-<div id="urHere">MkStone 管理中心<b>></b><strong>网站管理员</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <h3><a href="addmanager.html?rec=add" class="actionBtn">添加管理员</a>网站管理员</h3>
-        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+<div id="urHere">MkStone 管理中心<b>></b><strong>文章列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="addarticle.html?rec=add" class="actionBtn add">添加文章</a>文章列表</h3>
+    
+
+    <form name="action" method="get" action="delete.php">
+
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
      <tr>
-      <th width="30" align="center">编号</th>
-      <th align="center">管理员名称</th>
-      
-      <th align="center">密码</th>
-      <th align="center">操作</th>
+      <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
+      <th width="40" align="center">编号</th>
+      <th width="150" align="left">文章名称</th>
+      <th width="120" align="left">文章分类</th>
+      <th width="120" align="left">上传时间</th>
+      <th width="120" align="left">作者</th>
+      <th width="80" align="center">操作</th>
      </tr>
-          
 
-
-<?php
+ <?php
 header("Content-Type: text/html; charset=utf8");
    // if(!isset($_POST["submit"])){
       //  exit("错误执行");
    // }//检测是否有submit操作 
 
 include('MkStone_Connect.php');//链接数据库
-$q = "select * from admin";
+$q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr><td align='center'>".$row["aid"]."</td><td align='center'>".$row["admin"]."</td><td align='center'>".$row["apassword"]."</td>.<td align='center'><a href='delus.php?rec=del&id=9'>删除</a></td></tr>";
-  
-  
+ echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td><td align='left'>".$row["upload"]."</td><td align='left'>".$row["author"]."</td><td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td></tr>";
+ 
 }
 
 
 
 
      ?> 
-
-
-
-
-
-
-
-
-
-
+        
+       
          </table>
-                       </div>
+    <div class="action">
+     <select name="action" onchange="douAction()">
+      <option value="0">请选择...</option>
+      <option value="del_all">删除</option>
+      <option value="category_move">移动分类至</option>
+     </select>
+     <select name="new_cat_id" style="display:none">
+      <option value="0">未分类</option>
+                  <option value="业内文章">业内</option>
+                        <option value="文艺骚年">文艺</option>
+                 </select>
+     <input name="submit" class="btn" type="submit" value="执行" />
+    </div>
+    </form>
+    </div>
+    <div class="clear"></div>
+    <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="article_show.php?page=1">第一页</a> 上一页 下一页 <a href="article_show.php?page=1">最末页</a></div>           </div>
  </div>
  <div class="clear"></div>
 <div id="dcFooter">
  <div id="footer">
   <div class="line"></div>
   <ul>
-   版权所有 © 2016 ,MkStone 并保留所有权利。
+   版权所有 © 2016 MkStone，并保留所有权利 。
   </ul>
  </div>
-</div><!-- dcFooter 结束 -->
+</div><!-- dcFooter 结束 --> 
 <div class="clear"></div> </div>
+ <script type="text/javascript">
+ 
+ onload = function()
+ {
+   document.forms['action'].reset();
+ }
+
+ function douAction()
+ {
+     var frm = document.forms['action'];
+
+     frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
+ }
+ 
+ </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MkStone 管理中心</title>
@@ -42,7 +42,7 @@
   <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
  </ul>
   <ul>
-  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+  <li><a href="article_show.php"><i class="article"></i><em>文章列表</em></a></li>
  </ul>
   <ul>
   <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
@@ -57,7 +57,7 @@
  <div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">MkStone 管理中心<b></b><strong>添加文章</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="article.php" class="actionBtn">文章列表</a>添加文章</h3>
+            <h3><a href="article_show.php" class="actionBtn">文章列表</a>添加文章</h3>
     <form action="addarticle.php" method="post" enctype="multipart/form-data">
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
@@ -66,6 +66,24 @@
         <input type="text" name="title" value="" size="80" class="inpMain" />
        </td>
       </tr>
+      
+
+
+       <tr>
+       <td width="75" align="right">更新时间</td>
+       <td>
+        <input type="text" name="upload" placeholder="例如：2016-10-08" size="80" class="inpMain" />
+       </td>
+      </tr>
+ <tr>
+       <td width="90" align="right">文章作者</td>
+       <td>
+        <input type="text" name="author" value="" size="80" class="inpMain" />
+       </td>
+      </tr>
+
+
+
       <tr>
        <td align="right">文章分类</td>
        <td>
@@ -111,12 +129,34 @@
         <textarea id="content" name="content" style="width:780px;height:400px;" class="textArea"></textarea>
        </td>
       </tr>
-      <tr>
-       <td align="right">缩略图</td>
+     
+
+
+
+ <tr>
+       <td width="90" align="right">瀑布流图</td>
        <td>
-        <input type="file" name="image" size="38" class="inpFlie" />
-        <img src="images/icon_no.png"></td>
+        <input type="text" name="img1" placeholder="例如：images/article_28" size="80" class="inpMain" />
+       </td>
       </tr>
+
+
+       <tr>
+       <td width="90" align="right">文章大图</td>
+       <td>
+        <input type="text" name="img2" placeholder="例如：images/artical_28" size="80" class="inpMain" />
+       </td>
+      </tr>
+
+
+
+
+
+
+
+
+
+
       <tr>
      
        

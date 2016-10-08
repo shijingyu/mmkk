@@ -9,7 +9,7 @@ header("Content-Type: text/html; charset=utf8");
 include('MkStone_Connect.php');//链接数据库
 
 
-
+ 
 
 
 $resname=$_POST["name"];
@@ -17,8 +17,11 @@ $resfenlei=$_POST["cat_id"];
 $space=$_POST["space"];
 $rcontent=$_POST["content"];
 $http=$_POST["http"];
+$uptime=$_POST["uptime"];
+$support=$_POST["support"];
+$language=$_POST["language"];
 
-$res="insert into `res`(`resname`,`resfenlei`,`space`,`rcontent`,`http`) values('$resname','$resfenlei','$space','$rcontent','$http')";
+$res="insert into `res`(`resname`,`resfenlei`,`space`,`rcontent`,`http`,`uptime`,`support`,`language`) values('$resname','$resfenlei','$space','$rcontent','$http','$uptime','$support','$language')";
 
 $resss= mysql_query($res,$con);
 $num = mysql_num_rows($resss);

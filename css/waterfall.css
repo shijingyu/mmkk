@@ -3,23 +3,27 @@
 	margin: 0;
 	padding: 0;
 }
+.container
+{
+	margin: 0 auto;
+}
 .main{
-    -webkit-column-width:225px;
-    -moz-column-width:225px; 
-	-webkit-column-gap:3px;
-	-moz-column-gap:3px;
+	margin:0 100px;
+    padding: 20px;
 }
 
 
 /*数据块 砖块*/
 
-.main .box{width:205px;
-           margin:10px 0;
-           border-radius: 10px;
-           border:1px solid #ccc;
-           box-shadow:0 0 10px #ccc; 
-           cursor: pointer;
-           }
+.main .box{
+   width:205px;
+   float: left;
+   margin:10px 0;
+   border-radius: 10px;
+   border:1px solid #ccc;
+   box-shadow:0 0 10px #ccc; 
+   cursor: pointer;
+   }
 body
 {
 	padding-top: 70px;
@@ -53,6 +57,7 @@ footer .container p
 .box p 
 {
 	margin: 8px 10px;
+	color:#666;
 }
 
 .modal-body img {

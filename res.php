@@ -5,7 +5,7 @@
 <title>MkStone 管理中心</title>
 <meta name="Copyright" content="Douco Design." />
 <link href="css/public.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
 <script type="text/javascript" src="js/global.js"></script>
 </head>
 <body>
@@ -42,7 +42,7 @@
   <li><a href="res.php"><i class="product"></i><em>资源列表</em></a></li>
  </ul>
   <ul>
-  <li><a href="article.php"><i class="article"></i><em>文章列表</em></a></li>
+  <li><a href="article_show.php"><i class="article"></i><em>文章列表</em></a></li>
  </ul>
   <ul>
   <li><a href="usename.php"><i class="usename"></i><em>会员列表</em></a></li>
@@ -65,9 +65,12 @@
       <tr>
         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
         <th width="40" align="center">编号</th>
-        <th align="left">资源名称</th>
-        <th width="350" align="left">资源链接</th>
+        <th width="100" align="center">资源名称</th>
+        <th width="350" align="center">资源链接</th>
         <th width="100" align="center">资源分类</th>
+        <th width="100" align="center">软件语言</th>
+        <th width="100" align="center">支持系统</th>
+        <th width="100" align="center">更新时间</th>
         <th width="80" align="center">操作</th>
       </tr>
           
@@ -84,7 +87,7 @@ $q = "select * from res";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["rid"]."</td><td align='left'>".$row["resname"]."</td><td align='left'>".$row["http"]."</td><td align='center'>".$row["resfenlei"]."</td>.<td align='center'><a href='delus.php?rec=del&id=9'>删除</a></td></tr>";
+ echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["rid"]."</td><td align='left'>".$row["resname"]."</td><td align='left'>".$row["http"]."</td><td align='center'>".$row["resfenlei"]."</td><td align='center'>".$row["language"]."</td><td align='left'>".$row["support"]."</td><td align='center'>".$row["uptime"]."</td><td align='center'><a href='delete.php?action2=del&resid=".$row["rid"]."'>删除</a></td></tr>"; 
   
   
 }
