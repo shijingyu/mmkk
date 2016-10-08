@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MkStone 管理中心</title>
@@ -66,8 +66,10 @@
      <tr>
       <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
       <th width="40" align="center">编号</th>
-      <th align="left">文章名称</th>
-      <th width="150" align="left">文章分类</th>
+      <th width="150" align="left">文章名称</th>
+      <th width="120" align="left">文章分类</th>
+      <th width="120" align="left">上传时间</th>
+      <th width="120" align="left">作者</th>
       <th width="80" align="center">操作</th>
      </tr>
 
@@ -82,7 +84,7 @@ $q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr>.<td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td>.<td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td></tr>";
+ echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td>.<td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td><td align='left'>".$row["upload"]."</td><td align='left'>".$row["author"]."</td></tr>";
  
 }
 

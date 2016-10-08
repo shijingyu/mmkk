@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
@@ -86,291 +86,52 @@
       
         <div class="main" id="masonry">
            <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_14.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
+    <?php  
+
+
+
+
+    header("Content-Type: text/html; charset=utf8");
+   // if(!isset($_POST["submit"])){
+      //  exit("错误执行");
+   // }//检测是否有submit操作 
+
+include('MkStone_Connect.php');//链接数据库
+$q = "select * from article";
+$result = mysql_query($q);
+while($row=mysql_fetch_assoc($result))
+{
+ echo" <div class='box' type='button' data-toggle='modal' data-target='#myModal'>
+              <img src='images/artical_16.png' alt=''>
+              <p>".$row['articlename']."</p>
+              <p>".$row['fenlei']."</p>
+              <p>".$row['upload']."</p>
               <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
+              <img src='images/artical_28.png' alt=''>
+              ".$row['author']."    
               </p>
               <p>
-                <img src="images/artical_32.png" alt="">
+                <img src='images/artical_32.png' alt=''>
                 1437
-                <img src="images/artical_34.png" alt="">
+                <img src='images/artical_34.png' alt=''>
                 1437
-                <img src="images/artical_36.png" alt="">
+                <img src='images/artical_36.png' alt=''>
                 1437
               </p>       
           </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_16.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_18.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_20.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_22.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_14.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_16.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_18.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_20.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_22.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_14.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_16.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_18.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_20.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          <!-- 瀑布流小块 -->
-          <div class="box" type="button" data-toggle="modal" data-target="#myModal">
-              <img src="images/artical_22.png" alt="">
-              <p>百度云管家VIP破解方法</p>
-              <p>原创-破解教程</p>
-              <p>4小时前上传</p>
-              <p>
-              <img src="images/artical_28.png" alt="">
-              流逼爱喝牛奶    
-              </p>
-              <p>
-                <img src="images/artical_32.png" alt="">
-                1437
-                <img src="images/artical_34.png" alt="">
-                1437
-                <img src="images/artical_36.png" alt="">
-                1437
-              </p>       
-          </div>
-          
+
+          ";
+
+
+
+}
+
+
+         
+       
+      
+
+   ?>       
         </div>
 
       
@@ -420,47 +181,50 @@
  <!-- 底部开始 -->
  <footer>
    <div class="container">
-     <p>Copyright © 2016.kangml.com All rights reserved. <span><a href="">赞助</a></span></p>
+     <p>Copyright © 2016 MkStone  All rights reserved. <span><a href="about.html">赞助</a></span></p>
    </div>
  </footer>
  <!-- 底部结束 -->
 
 
+<?php  
 
- <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">mkStone</h4>
+while($row=mysql_fetch_assoc($result))
+{
+
+echo"
+<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+        <h4 class='modal-title' id='myModalLabel'>MkStone</h4>
       </div>
-      <div class="modal-body">
-        <div class="md-header">
-          <h1>shadowsocks翻墙指南</h1>
+      <div class='modal-body'>
+        <div class='md-header'>
+          <h1>".$row['articlename']."</h1>
 
 
         </div>
-        <div class="mb-content">
-          <img src="images/lb2.jpg" alt="">
-          <p>1984年12月19日，中英经过2年谈判后签署《联合声明》，解决了香港主权归属问题。根据《声明》第三段第12条，中华人民共和国将以《基本法》确立香港为特别行政区，并按照一国两制方针，保证主权移交前的资本主义制度，维持50年不变。中国大陆所施行的社会主义制度等将不会伸延到香港，香港特区政府会维持高度自治。根据《中华人民共和国宪法》第三十一条规定，国家在必要时得设立特别行政区，在特别行政区内实行的制度按照具体情况由全国人民代表大会以法律规定。</p>
-          <p>1984年12月19日，中英经过2年谈判后签署《联合声明》，解决了香港主权归属问题。根据《声明》第三段第12条，中华人民共和国将以《基本法》确立香港为特别行政区，并按照一国两制方针，保证主权移交前的资本主义制度，维持50年不变。中国大陆所施行的社会主义制度等将不会伸延到香港，香港特区政府会维持高度自治。根据《中华人民共和国宪法》第三十一条规定，国家在必要时得设立特别行政区，在特别行政区内实行的制度按照具体情况由全国人民代表大会以法律规定。</p>
+        <div class='mb-content'>
+          <img src='mages/lb2.jpg' alt=''>
+          <p>".$row['content']."</p>
 
 
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
       </div>
     </div>
   </div>
 </div>
 
+";
+}
 
 
-
-
-
+?>
 
 
  

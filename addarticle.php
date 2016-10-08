@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 header("Content-Type: text/html; charset=utf8");
    // if(!isset($_POST["submit"])){
@@ -15,8 +15,10 @@ include('MkStone_Connect.php');//链接数据库
 $articlename=$_POST["title"];
 $content=$_POST["content"];
 $fenlei=$_POST["cat_id"];
+$upload=$_POST['upload'];
+$author=$_POST['author'];
 
-$art="insert into `article` (`articlename`,`content`,`fenlei`) values('$articlename','$content','$fenlei')";
+$art="insert into article (articlename, content, fenlei, upload, author) values('$articlename','$content','$fenlei','$upload','$author')";
 
 $artcle= mysql_query($art,$con);
 $num = mysql_num_rows($artcle);
