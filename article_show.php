@@ -84,7 +84,7 @@ $q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]"</td><td align='left'>".$row["articlename"]"</td><td align='left'>".$row["fenlei"]"</td><td align='left'>".$row["upload"]"</td><td align='left'>".$row["author"]."</td><td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]"'>删除</a></td></tr>";
+ echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td><td align='left'>".$row["upload"]."</td><td align='left'>".$row["author"]."</td><td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td></tr>";
  
 }
 
