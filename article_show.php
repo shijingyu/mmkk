@@ -84,7 +84,7 @@ $q = "select * from article";
 $result = mysql_query($q);
 while($row=mysql_fetch_assoc($result))
 {
- echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]."</td><td align='left'>".$row["articlename"]."</td><td align='left'>".$row["fenlei"]."</td>.<td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]."'>删除</a></td><td align='left'>".$row["upload"]."</td><td align='left'>".$row["author"]."</td></tr>";
+ echo"<tr><td align='center'><input type='checkbox' name='checkbox[]'  /></td><td align='center'>".$row["uid"]"</td><td align='left'>".$row["articlename"]"</td><td align='left'>".$row["fenlei"]"</td><td align='left'>".$row["upload"]"</td><td align='left'>".$row["author"]."</td><td align='center'><a href='delete.php?action=del&articleid=".$row["uid"]"'>删除</a></td></tr>";
  
 }
 
@@ -121,7 +121,7 @@ while($row=mysql_fetch_assoc($result))
    版权所有 © 2016 MkStone，并保留所有权利 。
   </ul>
  </div>
-</div><!-- dcFooter 结束 -->
+</div><!-- dcFooter 结束 --> 
 <div class="clear"></div> </div>
  <script type="text/javascript">
  
