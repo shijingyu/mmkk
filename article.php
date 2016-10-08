@@ -109,7 +109,7 @@ while($row=mysql_fetch_assoc($result))
               <p>".$row['fenlei']."</p>
               <p>".$row['upload']."</p>
               <p>
-              <img src='images/artical_28.png' alt=''>
+              <img src='".$row['img1']"' alt=''>
               ".$row['author']."    
               </p>
               <p>
@@ -136,8 +136,8 @@ while($row=mysql_fetch_assoc($result))
 
         </div>
         <div class='mb-content'>
-        
-          <img src='images/lb2.jpg' alt=''>  
+
+          <img src='".$row['img2']"' alt=''>  
           
 
           <p>".$row['content']."</p>

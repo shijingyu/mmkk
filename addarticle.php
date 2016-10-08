@@ -13,12 +13,14 @@ include('MkStone_Connect.php');//链接数据库
 
 
 $articlename=$_POST["title"];
-$content=$_POST["content"];
+$content=$_POST["content"]; 
 $fenlei=$_POST["cat_id"];
 $upload=$_POST['upload'];
 $author=$_POST['author'];
+$img1=$_POST['img1'];
+$img2=$_POST['img2'];
 
-$art="insert into article (articlename, content, fenlei, upload, author) values('$articlename','$content','$fenlei','$upload','$author')";
+$art="insert into article (articlename, content, fenlei, upload, author, img1, img2) values('$articlename','$content','$fenlei','$upload','$author','$img1','$img2')";
 
 $artcle= mysql_query($art,$con);
 $num = mysql_num_rows($artcle);
