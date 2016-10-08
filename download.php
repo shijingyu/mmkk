@@ -62,8 +62,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/artical_09.png" style="width: 18px;" alt="" ><span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="article.html">个人资料</a></li>
-            <li><a href="article.html">退出</a></li>
+            <li><a href="my.php">个人资料</a></li>
+            <li><a href="article.php">退出</a></li>
           </ul>
         </li>
       </ul>
@@ -208,7 +208,7 @@ while($row=mysql_fetch_assoc($result))
   <!-- 底部开始 -->
  <footer>
    <div class="container">
-     <p>Copyright © 2016.kangml.com All rights reserved. <span><a href="">赞助</a></span></p>
+     <p>Copyright © 2016 MkStone  All rights reserved. <span><a href="">赞助</a></span></p>
    </div>
  </footer>
  <!-- 底部结束 -->
