@@ -36,9 +36,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        <li><a href="index.html">首页</a></li>
-            <li><a href="article.html">文章</a></li>
+            <li><a href="article.php">文章</a></li>
             <li><a href="ask.html">问答</a></li>
-            <li class="active"><a href="download.html">资源</a></li>
+            <li class="active"><a href="download.php">资源</a></li>
             <li><a href="about.html">关于</a></li>
       </ul>
       
@@ -91,34 +91,52 @@
            <div class="content-l col-md-10">
              
              
+<?php
 
-                <div class=" box row">
-                  <!-- 下载链接左边图片 -->
-                  <div class="download-img col-md-2">
-                  <a href="single.html"><img src="images/source_03.png" alt=""></a>
-                  </div>
-                  <!-- 下载链接右边描述 -->
-                  <div class="download-dec col-md-10">
-                    <!-- 描述标题 -->
-                    <h1>Shadowsocks 3.3.2（影梭）正式版</h1>
-                    <p class="dec1">                
-                        Shadowsocks是使用Python、C++、C#等语言开发的、基于Apache许可证的开放源代码软件，用于保护网络流量、加密数据传输。
-                        Shadowsocks使用Socks5代理方式。在中国大陆，本工具也被广泛用于突破防火长城（GFW），以浏览被封锁、屏蔽或干扰的内容。
-                        在2015年8月22日，Shadowsocks原作者Clowwindy称受到了中国政府的压力，宣布停止……
+  header("Content-Type: text/html; charset=utf8");
+   // if(!isset($_POST["submit"])){
+      //  exit("错误执行");
+   // }//检测是否有submit操作 
+
+include('MkStone_Connect.php');//链接数据库
+$q = "select * from res";
+$result = mysql_query($q);
+while($row=mysql_fetch_assoc($result))
+{
+
+        echo"
+    
+                <div class='box row'>
+                  
+                  <div class='download-img col-md-2'>
+
+                  <a href='single.html'><img src='images/source_03.png' alt=''></a>
+                
+                </div>
+               
+                  <div class='download-dec col-md-10'>
+                   
+                    <h1>".$row['resname']."</h1>
+                    <p class='dec1'>                
+                        ".$row['recontent']."
                     </p>
-                    <p class="dec2">
-                        <span>大小</span>：13.7M   &nbsp;     <span>上传时间</span>：2016-10-22 &nbsp;<span>软件类型</span>：网络连接 <br> 
-                        <span>语言</span>：中文&nbsp; &nbsp;&nbsp; &nbsp;<span>支持系统</span>：Windows7/8/10/Mac OS/ios/Andorid
+                    <p class='dec2'>
+                        <span>大小</span>：".$row['space']."  &nbsp;     <span>上传时间</span>：".$row['uptime']." &nbsp;<span>软件类型</span>：".$row['resfenlei']." <br> 
+                        <span>语言</span>：".$row['language']."&nbsp; &nbsp;&nbsp; &nbsp;<span>支持系统</span>：".$row['support']."
                     </p>
-                    <a href="single.html">
-                      <button type="button" class="btn btn-primary">立即下载</button>
+                    <a href='".$row['http']."'>
+                      <button type='button' class='btn btn-primary'>立即下载</button>
                     </a>
                   </div>
                 </div>
 
 
-                
 
+";
+                
+}
+
+?>
                 
 
 

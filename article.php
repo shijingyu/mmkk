@@ -103,13 +103,13 @@ while($row=mysql_fetch_assoc($result))
 {
 
  echo" <div class='box' type='button' data-toggle='modal' data-target='#".$row['uid']."'>
-              <img src='images/artical_16.png' alt=''>
+              <img src='".$row['img1']."' alt=''>
 
               <p>".$row['articlename']."</p>
               <p>".$row['fenlei']."</p>
               <p>".$row['upload']."</p>
               <p>
-              <img src='".$row['img1']"' alt=''>
+              <img src='images/artical_28.png' alt=''>
               ".$row['author']."    
               </p>
               <p>
@@ -137,7 +137,7 @@ while($row=mysql_fetch_assoc($result))
         </div>
         <div class='mb-content'>
 
-          <img src='".$row['img2']"' alt=''>  
+          <img src='".$row['img2']."' alt=''>  
           
 
           <p>".$row['content']."</p>
