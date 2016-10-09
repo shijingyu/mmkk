@@ -110,7 +110,7 @@ while($row=mysql_fetch_assoc($result))
                   
                   <div class='download-img col-md-2'>
 
-                  <a href='single.html'><img src='images/source_03.png' alt=''></a>
+                  <a href='single.php?action3=down&resid=".$row[rid]."'><img src='images/single-head.png' alt='' style='width:100px;heigth:100px;'></a>
                 
                 </div>
                

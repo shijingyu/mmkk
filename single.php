@@ -35,9 +35,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">首页</a></li>
-                        <li><a href="article.html">文章</a></li>
+                        <li><a href="article.php">文章</a></li>
                         <li><a href="ask.html">问答</a></li>
-                        <li class="active"><a href="download.html">资源</a></li>
+                        <li class="active"><a href="download.php">资源</a></li>
                         <li><a href="about.html">关于</a></li>
                     </ul>
                     <!-- 账户没有登录前显示的界面 -->
