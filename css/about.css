@@ -13,6 +13,8 @@ html,body{
 	height: 100%;
 	overflow: hidden;
 }
+/*parallax*/
+
 #container,.sections,.section{
 	height: 100%;
 	position: relative;
@@ -104,7 +106,7 @@ p{
 
 
 /*section1 shitouge's introduce*/
-.single-head{
+#section1 .single-head{
      height: 200px;
      width: 100%;
      padding-top: 100px;
@@ -117,7 +119,26 @@ p{
 	color: #000;
 }
 /*section2 soFly's introduce*/
+#section2 .single-head{
+	width: 100%;
+	text-align: center;
+	padding:80px 200px;
 
+}
+#section2 .intro p{
+
+	font-family: myFont;
+	color: #82717c;
+	text-shadow: 4px;
+}
+
+
+#section2 .single-head img{
+
+	width: 80px;
+	height: 80px;
+
+}
 
 
 

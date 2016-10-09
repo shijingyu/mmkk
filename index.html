@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/jqhover.css">
+    <!-- <link rel="stylesheet" href="css/jqhover.css"> -->
     <link rel="stylesheet" href="fonts/BRUSHSCRIPTSTD.OTF">
 </head>
 
@@ -121,8 +121,9 @@
                             <li class="cs-style-4">
                                 <figure style="width:210px;">
                                     <div class="jqhover-main">
-                                        <div class="jqhover-border">
+                                        <div class="jqhover-border"><div class="jqhover-ns">
                                             <a href="article.php"><img src="images/article.png" alt="img05"></a>
+                                            </div>
                                             <p class="fun-name">文章分享</p>
                                         </div>
                                         <div class="fun-describe">
@@ -139,8 +140,9 @@
                             <li class="cs-style-4">
                                 <figure style="width:210px;">
                                     <div class="jqhover-main">
-                                        <div class="jqhover-border">
+                                        <div class="jqhover-border"><div class="jqhover-ns">
                                             <a href="download.php"><img src="images/download.png" alt="img05"></a>
+                                            </div>
                                             <p class="fun-name">资源下载</p>
                                         </div>
                                         <div class="fun-describe">
@@ -157,8 +159,9 @@
                             <li class="cs-style-4">
                                 <figure style="width:210px;">
                                     <div class="jqhover-main">
-                                        <div class="jqhover-border">
-                                            <a href="ask.html"><img src="images/ask.png" alt="img05"></a>
+                                        <div class="jqhover-border"><div class="jqhover-ns">
+                                            <a href="ask.html"><img class="ns1" src="images/ask.png" alt="img05"></a>
+                                            </div>
                                             <p class="fun-name">问题讨论</p>
                                         </div>
                                         <div class="fun-describe">
@@ -176,7 +179,8 @@
                                 <figure style="width:210px;">
                                     <div class="jqhover-main">
                                         <div class="jqhover-border">
-                                            <a href="index.html"><img src="images/other.png" alt="img05"></a>
+                                        <div class="jqhover-ns">
+                                            <a href="index.html"><img src="images/other.png" alt="img05"></a></div>
                                             <p class="fun-name">其他</p>
                                         </div>
                                         <div class="fun-describe">
@@ -271,8 +275,24 @@
     </div>
 </body>
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
+<!-- <script src="js/modernizr.custom.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/about/ns.hover.js"></script>
+
+<script>
+  $('.jqhover-ns').nsHover({
+      scaling : 1.2,
+      speed: 'normal',
+      rounded: 'normal',
+      bgcolor: '#fff',
+      bgopacity : 0.6,            
+      bgpic : 'images/lens.png',
+      bgsize : '50%',
+      bganim : 'fade',
+      shadow : false,
+      content: ''
+  });
+</script> 
 
 </html>

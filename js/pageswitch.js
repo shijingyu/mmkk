@@ -238,3 +238,4 @@
 		$('[data-PageSwitch]').PageSwitch();
 	});
 })(jQuery);
+  
